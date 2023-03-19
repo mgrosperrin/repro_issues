@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 var contextOptions = new DbContextOptionsBuilder()
-    .UseInMemoryDatabase("Test").Options;
+    .UseSqlServer("Server=(localdb)\\v11.0;Integrated Security=true;").Options;
 
+var newName = "Hello";
 var context = new EntityContext(contextOptions);
 context.Entities.ExecuteUpdate(
-    updates => updates.SetProperty(e => e.Name, "Test"));
+    updates => updates.SetProperty(e => e.Name, e => newName ?? e.Name));
 
 public class Entity
 {
