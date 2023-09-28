@@ -2,19 +2,22 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 var contextOptions = new DbContextOptionsBuilder()
-    .UseSqlServer("Server=localhost;Database=filteredinclude;User Id=sa;Password=yourStrong(!)Password;Encrypt=false;MultipleActiveResultSets=true;").Options;
+    .UseSqlServer("Server=localhost;Database=test;User Id=sa;Password=yourStrong(!)Password;Encrypt=false;MultipleActiveResultSets=true;").Options;
 
 var widgetId = Guid.NewGuid();
 var dashboardId = Guid.NewGuid();
 var context = new EntityContext(contextOptions);
-var widgets = context.Dashboards
-        .Include(x => x.Widgets.Where(w => w.WidgetId == widgetId))
+
+var widgets = await context.Dashboards
         .Where(d => d.DashboardId == dashboardId)
-        .SelectMany(d => d.Widgets);
+        .SelectMany(d => d.Widgets)
+        .Where(w => w.WidgetId == widgetId)
+        .ExecuteDeleteAsync(/*update => update.SetProperty(w => w.Name, w => w.Name + "_Changed")*/)
+        ;
 
-Console.WriteLine(widgets.ToQueryString());
-
-public  class Dashboard
+Console.WriteLine(widgets/*.ToQueryString()*/);
+//w.DashboardId == dashboardId && 
+public class Dashboard
 {
     public Guid DashboardId { get; set; }
     public IEnumerable<Widget> Widgets { get; set; } = null!;
