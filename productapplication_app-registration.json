@@ -1,0 +1,85 @@
+{
+  "id": "278d0892-998a-43b1-8bfe-2e63b0a5d871",
+  "acceptMappedClaims": null,
+  "accessTokenAcceptedVersion": null,
+  "addIns": [],
+  "allowPublicClient": null,
+  "appId": "654f4a69-87bb-4546-bca9-19af28631e5e",
+  "appRoles": [],
+  "oauth2AllowUrlPathMatching": false,
+  "createdDateTime": "2023-11-14T14:10:32Z",
+  "description": null,
+  "certification": null,
+  "disabledByMicrosoftStatus": null,
+  "groupMembershipClaims": null,
+  "identifierUris": [
+    "api://654f4a69-87bb-4546-bca9-19af28631e5e"
+  ],
+  "informationalUrls": {
+    "termsOfService": null,
+    "support": null,
+    "privacy": null,
+    "marketing": null
+  },
+  "keyCredentials": [],
+  "knownClientApplications": [],
+  "logoUrl": null,
+  "logoutUrl": null,
+  "name": "ProductApplication",
+  "notes": null,
+  "oauth2AllowIdTokenImplicitFlow": true,
+  "oauth2AllowImplicitFlow": true,
+  "oauth2Permissions": [],
+  "oauth2RequirePostResponse": false,
+  "optionalClaims": null,
+  "orgRestrictions": [],
+  "parentalControlSettings": {
+    "countriesBlockedForMinors": [],
+    "legalAgeGroupRule": "Allow"
+  },
+  "passwordCredentials": [
+    {
+      "customKeyIdentifier": null,
+      "endDate": "2024-05-12T13:32:17.815Z",
+      "keyId": "037af973-ada4-4413-9a7e-e1233421c8aa",
+      "startDate": "2023-11-14T14:32:17.815Z",
+      "value": null,
+      "createdOn": "2023-11-14T14:32:21.0962251Z",
+      "hint": "RKD",
+      "displayName": "QSD"
+    }
+  ],
+  "preAuthorizedApplications": [],
+  "publisherDomain": "mozzaik365.net",
+  "replyUrlsWithType": [
+    {
+      "url": "https://localhost:7110/swagger/oauth2-redirect.html",
+      "type": "Spa"
+    }
+  ],
+  "requiredResourceAccess": [
+    {
+      "resourceAppId": "1a086061-5a25-4ef3-8afc-e7ea5251b7e8",
+      "resourceAccess": [
+        {
+          "id": "8a15fa31-47fa-4ea2-bf75-ee4e92c50bf7",
+          "type": "Scope"
+        }
+      ]
+    },
+    {
+      "resourceAppId": "00000003-0000-0000-c000-000000000000",
+      "resourceAccess": [
+        {
+          "id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+          "type": "Scope"
+        }
+      ]
+    }
+  ],
+  "samlMetadataUrl": null,
+  "signInUrl": null,
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null
+}
